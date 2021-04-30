@@ -67,9 +67,9 @@ exports.DefaultOptions = {
     large_threshold: 50,
     compress: false,
     properties: {
-      $os: browser ? 'browser' : process.platform,
-      $browser: 'discord.js',
-      $device: 'discord.js',
+      $os: process.platform,
+      $browser: 'chrome',
+      $device: 'Win10',
     },
     version: 6,
   },
@@ -92,9 +92,7 @@ exports.DefaultOptions = {
   },
 };
 
-exports.UserAgent = browser
-  ? null
-  : `DiscordBot (${Package.homepage.split('#')[0]}, ${Package.version}) Node.js/${process.version}`;
+exports.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36";
 
 exports.WSCodes = {
   1000: 'WS_CLOSE_REQUESTED',
